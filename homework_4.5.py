@@ -5,8 +5,11 @@
 
 from functools import reduce
 
-my_list = {el for el in range (100,1001,2)}
-print((my_list))
+def my_list(a, i):
+    return a*i
+
+new_list = {el for el in range (100,1001,2)}
+print(reduce(my_list, new_list))
 
 # -------
 

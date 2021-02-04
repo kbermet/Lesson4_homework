@@ -4,3 +4,22 @@
 # быть бесконечным. Необходимо предусмотреть условие его завершения.
 # Например, в первом задании выводим целые числа, начиная с 3, а при достижении числа 10 завершаем цикл. Во втором
 # также необходимо предусмотреть условие, при котором повторение элементов списка будет прекращено.
+
+from itertools import count
+from itertools import cycle
+
+for el in count(5):
+    if el >7:
+        break
+    else:
+        print(el)
+
+iter_el = ['a', 'b']
+iter = cycle(iter_el)
+print(next(iter))
+print(next(iter))
+print(next(iter))
+print(next(iter))
+
+
+

@@ -4,12 +4,13 @@
 #     с 1! и до n!.
 # Подсказка: факториал числа n — произведение чисел от 1 до n. Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 
-def generator ():
-    for el in fact(n):
-        yield n
-print(n)
-g = generator()
-print(g)
+def generator (number):
+    num =1
+    if number  == 0:
+        yield f'{number}!=1'
+    for i in range (1,number+1):
+        num *=i
+        yield f'{i}! = {num}'
 
-# for el in g:
-#     print(el)
+for el in generator(int(input('Factorial:'))):
+    print(el)

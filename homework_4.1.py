@@ -4,8 +4,13 @@
 
 from sys import argv
 
-scremp_hours, rate, bonus = argv
 
-print(40, emp_hours)
-print(300, rate)
-print(1000, bonus)
+def salary():
+    try:
+        emp_hours, rate, bonus = map(float, argv[1:])
+        print(f"Your salary is: {emp_hours * rate + bonus}")
+    except ValueError:
+        print('Enter 3 numbers')
+
+
+salary()
